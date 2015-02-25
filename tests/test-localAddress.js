@@ -9,7 +9,7 @@ tape('bind to invalid address', function(t) {
     localAddress: '1.2.3.4'
   }, function(err, res) {
     t.notEqual(err, null)
-    t.equal(err.message, 'bind EADDRNOTAVAIL')
+    t.equal(err.message, 'bind EADDRNOTAVAIL 1.2.3.4')
     t.equal(res, undefined)
     t.end()
   })
